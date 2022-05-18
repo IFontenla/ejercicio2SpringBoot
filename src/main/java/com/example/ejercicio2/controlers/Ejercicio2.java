@@ -24,6 +24,12 @@ DatoService datoService;
 @Autowired
 TraductorService traductorService;
 
+    // http://localhost:8080/
+    @GetMapping("/")
+    public String greet() {
+        return "Bienvenido al servidor backend";
+    }
+
     //http://localhost:8080/cambiarPalabra/BBBB
     @GetMapping("/cambiarPalabra/{cambioPalabra}")
     public String cambioPalabra(@PathVariable String cambioPalabra) {
